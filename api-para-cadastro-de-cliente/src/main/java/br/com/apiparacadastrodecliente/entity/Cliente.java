@@ -1,22 +1,23 @@
 package br.com.apiparacadastrodecliente.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Data
 @Entity
 @Builder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente implements Serializable {
+public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     private String Nome;
     private String DataCadastro;
